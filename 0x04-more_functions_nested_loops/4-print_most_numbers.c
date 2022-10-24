@@ -3,7 +3,7 @@
 
 /**
  *print_most_numbers - print 01356789
- * @c: char to check
+ * 
  * Return: void
  */
 
