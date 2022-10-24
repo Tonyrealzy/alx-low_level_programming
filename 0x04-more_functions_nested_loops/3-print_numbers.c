@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- *print_numbers - prints the numbers
- * from 0 to 9, followed by a new line
+ *print_numbers - prints the numbers 0123456789
  *
- * Return: void
+ * Return: Always (0)
  */
 
 void print_numbers(void)
@@ -16,4 +15,6 @@ void print_numbers(void)
 		_putchar(c);
 	}
 	_putchar('\n');
+	return (0);
+
 }
