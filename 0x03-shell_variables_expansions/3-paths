@@ -1,2 +1,0 @@
-#!/bin/bash
-echo $PATH | tr -s":" | grep -o ":" | tr -d "\n" | paste -d" " | wc -c
