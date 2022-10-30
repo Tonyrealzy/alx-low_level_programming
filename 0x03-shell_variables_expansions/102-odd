@@ -1,2 +1,0 @@
-#!/bin/bash
-cat -n | grep $'[13579]\t' | cut -f2
