@@ -5,12 +5,13 @@
  * @s: string
  * Return: address of s
  */
+
 char *cap_string(char *s)
 {
-	int i = 0, j;
+	int i = 0, j = 0;
 	char a[] = " \t\n,;.!?(){}";
 
-	while *(s + i)
+	while (*(s + i))
 	{
 		if (*(s + i) >= 'a' && *(s + i) <= 'z')
 		{
