@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+Hello world
+=======
+a script that runs a C file through the preprocessor and save the result into another file
+>>>>>>> f4d21cd3b8cc617295a19bf99042965dea0b5138
