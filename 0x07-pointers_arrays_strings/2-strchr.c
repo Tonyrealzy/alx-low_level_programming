@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strchr- locates a character in a string
+ * _strchr - locates a character in a string
  * @s: string
  * @c: char
  *
@@ -12,8 +12,6 @@ char *_strchr(char *s, char c)
 {
 	char *p;
 	int i;
-
-	p = 0;
 
 	for (i = 0; s[i] != '0'; i++)
 	{
@@ -27,7 +25,7 @@ char *_strchr(char *s, char c)
 	if (s[i] == c)
 	{
 		p = &s[i];
-		return (p);
 	}
+	return (p);
 }
 
