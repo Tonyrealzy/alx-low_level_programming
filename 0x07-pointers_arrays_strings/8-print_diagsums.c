@@ -27,5 +27,5 @@ void print_diagsums(int *a, int size)
 	{
 		 Diag2 = Diag2 + a[i];
 	}
-	printf("%d, %d\n", Diag1, Diag2);
+	printf("%i, %i\n", Diag1, Diag2);
 }
