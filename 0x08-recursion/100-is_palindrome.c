@@ -29,7 +29,7 @@ int helperFunction(char *s, int i1, int i2)
 	{
 		return (helperFunction(s, i1 + 1, i2 - 1));
 	}
-	if (s[i1] != [i2])
+	if (s[i1] != s[i2])
 	{
 		return (0);
 	}

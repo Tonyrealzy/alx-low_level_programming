@@ -4,7 +4,7 @@
  * helperFunction - returns 0 or 1
  * @num: number being checked
  * @i: possible factor num
- * Return: 1, if prime or 0 if not
+ * Return: 1, if prime or 0, if not
  */
 
 int helperFunction(int num, int i)
@@ -16,7 +16,7 @@ int helperFunction(int num, int i)
 		else
 			return (helperFunction(num, i + 1));
 	}
-	else 
+	else
 		return (1);
 }
 
@@ -32,5 +32,5 @@ int is_prime_number(int n)
 	if (n == 0)
 		return (0);
 	else
-		return (helperFunction(n, 2));
+		return (helperFunction(n, 1));
 }
