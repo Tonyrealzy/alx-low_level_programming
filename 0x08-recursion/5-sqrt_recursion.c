@@ -18,7 +18,7 @@ int helperFunction(int num, int p)
 	{
 		if (p * p > num)
 			return (-1);
-		else 
+		else
 			return (helperFunction(num, p + 1));
 	}
 }
