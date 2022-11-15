@@ -18,7 +18,13 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	m *= atoi(argv[i]);
+	if (argc > 2)
+	{
+		for (i = 1; i < argc; i++)
+		{
+			m *= atoi(argv[i]);
+		}
 	printf("%d\n", m);
+	}
 	return (0);
 }
