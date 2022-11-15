@@ -18,8 +18,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	
-	i = atoi(argv[i]);
-	j = atoi(argv[j]);
+	i = atoi(argv[1]);
+	j = atoi(argv[2]);
 
 	m = i * j;
 	printf("%d\n", m);
