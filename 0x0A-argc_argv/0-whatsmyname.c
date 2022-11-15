@@ -4,7 +4,7 @@
  * main - prints the name of a program
  * followed by a new line
  * @argc: argument count
- * @argv - arguments
+ * @argv: arguments
  * Return: 0
  */
 
