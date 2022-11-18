@@ -4,8 +4,8 @@
 /**
  * create_array - creates an array of chars
  * and initializes it with a specific char
- * size: size of array
- * c: constant
+ * @size: size of array
+ * @c: constant
  * Return: pointer to the array, or NULL if it fails
  */
 
