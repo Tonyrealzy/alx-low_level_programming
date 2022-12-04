@@ -3,7 +3,6 @@
 
 /**
  * free_dog - frees dogs
- * @dog_t: new name of struct dog
  * @d: pointer
  *
  * Return: void
