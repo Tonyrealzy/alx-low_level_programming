@@ -28,10 +28,11 @@ int main(int argc, char *argv[])
 	s = argv[2][0];
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	if ((s != '+' && s != '-' && s != '*' && s != '/' && s != '%') || (s == '/' && b == 0))
+	if ((s != '+' && s != '-' && s != '*' && s != '/' && s != '%') 
+			|| (s == '/' && s == '%' && b == 0))
 	{
 		printf("Error\n");
-		exit(99);
+		exit(100);
 	}
 	res = (get_op_func(argv[2]))(a, b);
 	printf("%d\n", res);
