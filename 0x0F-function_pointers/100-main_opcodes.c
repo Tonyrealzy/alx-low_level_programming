@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < n; i++)
 	{
-		printf("%02x\n", opc[i]);
+		printf("%.2hhx\n", opc[i]);
 		if (i < n - 1)
 			printf(" ");
 		else
