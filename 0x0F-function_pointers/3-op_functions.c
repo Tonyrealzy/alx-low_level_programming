@@ -1,19 +1,18 @@
 #include "3-calc.h"
 
 /**
- * op_add - adds two integers
+ * op_add- adds two integers
  * @a: first int
  * @b: second int
  * Return: result
  */
-
 int op_add(int a, int b)
 {
 	return (a + b);
 }
 
  /**
-  * op_sub - gets the difference of two integers
+  * op_sub- gets the difference of two integers
   * @a: first int
   * @b: second int
   * Return: result
