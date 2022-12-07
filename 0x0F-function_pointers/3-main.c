@@ -24,12 +24,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	
 	/*Usage: calc num1 operator num2*/
 	s = argv[2][0];
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-
 	if ((s != '+' && s != '-' && s != '*' && s != '/' && s != '%') || (s == '/' && b == 0))
 	{
 		printf("Error\n");
