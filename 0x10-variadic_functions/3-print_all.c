@@ -11,6 +11,7 @@
 void print_all(const char * const format, ...)
 {
 	int i;
+	char separator;
 	char *ss;
 	va_list arg_list;
 
@@ -39,11 +40,12 @@ void print_all(const char * const format, ...)
 				i++;
 				break;
 		}
-		if (format[i + 1] != '\0')
+		if (format[i + 1] != '\0' && i < 4)
 		{
-			printf(", ");
-			i++;
+			printf("%s", separator);
+			separator = ", ";
 		}
+		i++;
 	}
 	printf("\n");
 	va_end(arg_list);
