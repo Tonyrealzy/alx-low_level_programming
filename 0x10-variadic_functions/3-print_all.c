@@ -38,14 +38,15 @@ void print_all(const char * const format, ...)
 				break;
 			default:
 				i++;
-				break;
+				continue;
 		}
 		if (format[i + 1] != '\0' && i < 4)
 		{
+
 			printf("%s", separator);
 			separator = ", ";
+			i++;
 		}
-		i++;
 	}
 	printf("\n");
 	va_end(arg_list);
