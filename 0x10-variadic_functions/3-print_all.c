@@ -11,7 +11,9 @@
 void print_all(const char * const format, ...)
 {
 	int i, ii;
-	char cc, ss, ff;
+	char cc;
+	char *ss;
+	double ff;
 	va_list arg_list;
 
 	va_start(arg_list, format);
@@ -22,7 +24,7 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				cc = va_arg(arg_list, char);
-				printf("%s", cc);
+				printf("%c", cc);
 				break;
 			case 'i':
 				ii = va_arg(arg_list, int);
