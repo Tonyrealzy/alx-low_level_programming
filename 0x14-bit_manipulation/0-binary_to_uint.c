@@ -10,19 +10,18 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int n = 1;
-	int i, j;
+	int i = 0;
 
 	if (!b)
 		return (0);
-	for (i = 0; b[i] != '\0'; i++)
+	while (b[i] != '\0')
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		j = 0;
-		while (b[j] != '0')
+		while (b[i] != '0')
 		{
-			n = 1 << j;
-			j++;
+			n = 1 << i;
+			i++;
 			n += n;
 		}
 	}
