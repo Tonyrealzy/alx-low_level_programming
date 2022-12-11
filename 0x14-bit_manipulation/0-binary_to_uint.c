@@ -9,7 +9,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int n = 0;
+	unsigned int n = 1;
 	int i;
 
 	if (b == NULL)
@@ -18,8 +18,9 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		n = n << i;
-		n = (n * 10) + n;
+		if (b[i] != '0')
+		n = 1 << i;
+		n += n;
 		i++;
 	}
 	return (n);
