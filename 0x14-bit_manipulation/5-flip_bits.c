@@ -11,7 +11,7 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int i, j;
+	unsigned int i, j;
 
 	if (i > 64)
 		return (-1);
