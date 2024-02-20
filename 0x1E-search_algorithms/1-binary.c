@@ -1,52 +1,61 @@
-#ifndef _SORTING_ALGOS_H_
-#define _SORTING_ALGOS_H_
-
-#include <stdlib.h>
-#include <stdio.h>
+#include "search_algos.h"
 
 /**
- * struct listint_s - singly linked list
+ * recursive_search - searches for a value in an array of
+ * integers using the Binary search algorithm
  *
- * @n: Integer
- * @index: Index of the node in the list
- * @next: Pointer to the next node
  *
- * Description: singly linked list node structure
- * for Holberton project
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
-typedef struct listint_s
+int recursive_search(int *array, size_t size, int value)
 {
-	int n;
-	size_t index;
-	struct listint_s *next;
-} listint_t;
+	size_t half = size / 2;
+	size_t i;
+
+	if (array == NULL || size == 0)
+		return (-1);
+
+	printf("Searching in array");
+
+	for (i = 0; i < size; i++)
+		printf("%s %d", (i == 0) ? ":" : ",", array[i]);
+
+	printf("\n");
+
+	if (half && size % 2 == 0)
+		half--;
+
+	if (value == array[half])
+		return ((int)half);
+
+	if (value < array[half])
+		return (recursive_search(array, half, value));
+
+	half++;
+
+	return (recursive_search(array + half, size - half, value) + half);
+}
 
 /**
- * struct skiplist_s - Singly linked list with an express lane
+ * binary_search - calls to binary_search to return
+ * the index of the number
  *
- * @n: Integer
- * @index: Index of the node in the list
- * @next: Pointer to the next node
- * @express: Pointer to the next node in the express lane
- *
- * Description: singly linked list node structure with an express lane
- * for Holberton project
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
-typedef struct skiplist_s
+int binary_search(int *array, size_t size, int value)
 {
-	int n;
-	size_t index;
-	struct skiplist_s *next;
-	struct skiplist_s *express;
-} skiplist_t;
+	int index;
 
-int linear_search(int *array, size_t size, int value);
-int binary_search(int *array, size_t size, int value);
-int jump_search(int *array, size_t size, int value);
-int interpolation_search(int *array, size_t size, int value);
-int exponential_search(int *array, size_t size, int value);
-int advanced_binary(int *array, size_t size, int value);
-listint_t *jump_list(listint_t *list, size_t size, int value);
-skiplist_t *linear_skip(skiplist_t *list, int value);
+	index = recursive_search(array, size, value);
 
-#endif
+	if (index >= 0 && array[index] != value)
+		return (-1);
+
+	return (index);
+}
