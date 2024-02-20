@@ -1,0 +1,1 @@
+This folder contains code files for my '0x1E-search_algorithms' tasks.
